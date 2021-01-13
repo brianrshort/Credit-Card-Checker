@@ -98,3 +98,12 @@ const invalidCred = arr => {
 }
 
 
+function findInvalidCreditCards(arrays) {
+    const newArray = arrays.filter(array => {
+        return invalidCred(array);
+    });
+    //console.log(newArray);
+    //console.log(newArray.length);
+    return newArray;
+}
+
