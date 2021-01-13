@@ -61,3 +61,40 @@ const validateCred = arr => {
 }
 
 
+const invalidCred = arr => {
+    let newArr = [];
+    let reversedArray = arr.reverse();
+    //console.log(reversedArray);
+    for (var i = 0; i < reversedArray.length; i++) {
+        if (i === 0) {
+            newArr.push(reversedArray[i]);
+        } else if (i % 2 === 0) {
+            newArr.push(reversedArray[i]);
+            //console.log(newArr);
+        } else {
+        let timesTwo = reversedArray[i] * 2;
+        //console.log(timesTwo);
+        if (timesTwo > 9) {
+            let newSum = timesTwo - 9;
+            newArr.push(newSum);
+            //console.log(newArr);
+        } else {
+            newArr.push(timesTwo);
+            //console.log(newArr);
+        }
+    }
+}
+    let arrSum = newArr.reduce(function (a, b) {
+        return a + b;
+    }, 0);
+    //console.log(arrSum);
+    if (arrSum % 10 === 0) {
+        //console.log("false");
+        return false;
+    } else {
+        //console.log("true");
+        return arr;
+    }
+}
+
+
