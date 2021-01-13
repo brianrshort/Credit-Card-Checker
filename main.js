@@ -125,3 +125,25 @@ function idInvalidCardCompanies(arrays) {
     //console.log(newArr);
     return newArr;
 }
+
+// invalidCred(valid1);
+// invalidCred(valid2);
+// invalidCred(valid3);
+// invalidCred(valid4);
+// invalidCred(valid5);
+
+// invalidCred(invalid1);
+// invalidCred(invalid2);
+// invalidCred(invalid3);
+// invalidCred(invalid4);
+// invalidCred(invalid5);
+
+// invalidCred(mystery1);
+// invalidCred(mystery2);
+// invalidCred(mystery3);
+// invalidCred(mystery4);
+// invalidCred(mystery5);
+
+//findInvalidCreditCards(batch);
+
+//idInvalidCardCompanies(idArray);
