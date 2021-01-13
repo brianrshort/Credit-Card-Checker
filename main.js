@@ -107,3 +107,21 @@ function findInvalidCreditCards(arrays) {
     return newArray;
 }
 
+const idArray = findInvalidCreditCards(batch);
+
+function idInvalidCardCompanies(arrays) {
+    const newArr = [];
+    for (var i=0; i < arrays.length; i++) {
+        if (arrays[i][0] === 3 && newArr.includes("Amex") === false) {
+            newArr.push("Amex");
+        } else if (arrays[i][0] === 4 && newArr.includes("Visa") === false) {
+            newArr.push("Visa");
+        } else if (arrays[i][0] === 5 && newArr.includes("Mastercard") === false) {
+            newArr.push("Mastercard");
+        } else if (arrays[i][0] === 6 && newArr.includes("Discover") === false) {
+            newArr.push("Discover");
+        }
+    }
+    //console.log(newArr);
+    return newArr;
+}
