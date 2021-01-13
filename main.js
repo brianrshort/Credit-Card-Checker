@@ -22,4 +22,42 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
+// Test and validation functions below
+
+const validateCred = arr => {
+    let newArr = [];
+    let reversedArray = arr.reverse();
+    //console.log(reversedArray);
+    for (var i = 0; i < reversedArray.length; i++) {
+        if (i === 0) {
+            newArr.push(reversedArray[i]);
+        } else if (i % 2 === 0) {
+            newArr.push(reversedArray[i]);
+            //console.log(newArr);
+        } else {
+        let timesTwo = reversedArray[i] * 2;
+        //console.log(timesTwo);
+        if (timesTwo > 9) {
+            let newSum = timesTwo - 9;
+            newArr.push(newSum);
+            //console.log(newArr);
+        } else {
+            newArr.push(timesTwo);
+            //console.log(newArr);
+        }
+    }
+}
+    let arrSum = newArr.reduce(function (a, b) {
+        return a + b;
+    }, 0);
+    //console.log(arrSum);
+    if (arrSum % 10 === 0) {
+        //console.log("true");
+        return true;
+    } else {
+        //console.log("false");
+        return false;
+    }
+}
+
 
